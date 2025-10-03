@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUALINA | Agência Criativa</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">DUALINA</a>
+        <nav class="navbar">
+            <a href="#home">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#services">Serviços</a>
+            <a href="#portfolio">Projetos</a>
+            <a href="#contact" class="btn-contact">Contato</a>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-video-wrapper">
+                 <video playsinline autoplay muted loop poster="placeholder-image.jpg">
+                    <source src="background-video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">DUALINA</h1>
+                <p class="hero-subtitle">agência criativa</p>
+                <p class="hero-slogan">Criatividade que conecta. Estratégias que geram resultados.</p>
+            </div>
+        </section>
+
+        <section class="pillars">
+             <div class="container">
+                <div class="pillar-item animate-on-scroll">
+                     <h3>Escuta Ativa</h3>
+                    <p>Entendemos seus desafios para construir soluções com propósito.</p>
+                </div>
+                <div class="pillar-item animate-on-scroll">
+                    <h3>Design e Estratégia</h3>
+                    <p>Unimos criatividade e dados para criar marcas autênticas e campanhas que convertem.</p>
+                </div>
+                <div class="pillar-item animate-on-scroll">
+                    <h3>Processo Transparente</h3>
+                    <p>Valorizamos cada etapa do processo criativo, com leveza e colaboração.</p>
+                </div>
+                <div class="pillar-item animate-on-scroll">
+                    <h3>Soluções Sob Medida</h3>
+                    <p>Cada projeto é um universo único, tratado com o olhar exclusivo que ele merece.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container about-container">
+                <div class="about-image animate-on-scroll">
+                    <img src="https://via.placeholder.com/500x550" alt="Equipe Dualina em um ambiente criativo">
+                </div>
+                <div class="about-content animate-on-scroll">
+                    <h2 class="section-title">Fora do óbvio.</h2>
+                    <h3>Somos a agência que tira suas ideias do papel e as coloca em movimento.</h3>
+                    <p>Nascemos da vontade de fazer diferente. A Dualina é uma agência criativa que acredita na força de uma comunicação autêntica e com propósito. Para nós, cada cliente é o centro da narrativa. Mergulhamos no universo de cada projeto para construir, juntos, uma comunicação visual leve, com personalidade e que traduz os valores essenciais da sua marca.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title text-center">Criatividade aplicada para o seu negócio.</h2>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <h4>Identidade Visual</h4>
+                        <p>Construímos a alma da sua marca. Do logotipo à paleta de cores, criamos uma identidade consistente, original e com propósito.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <h4>Gestão de Redes Sociais</h4>
+                        <p>Mais do que posts, criamos conexões. Planejamos, criamos e gerenciamos conteúdo que gera engajamento e fortalece sua presença digital.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <h4>Conteúdo Audiovisual</h4>
+                        <p>Capturamos momentos reais. Roteirizamos, gravamos e editamos vídeos que contam a sua história com sensibilidade.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <h4>Marketing Digital</h4>
+                        <p>Desenhamos o caminho para você alcançar seus objetivos com análise de mercado, planejamento de campanhas e foco em resultados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title text-center">Projetos com a nossa cara.</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item animate-on-scroll"><img src="https://via.placeholder.com/600x400/32a852/f5f5dc?text=Projeto+A" alt="Projeto A"></div>
+                    <div class="portfolio-item animate-on-scroll"><img src="https://via.placeholder.com/600x400/e8772e/f5f5dc?text=Projeto+B" alt="Projeto B"></div>
+                    <div class="portfolio-item animate-on-scroll"><img src="https://via.placeholder.com/600x400/594a3c/f5f5dc?text=Projeto+C" alt="Projeto C"></div>
+                    <div class="portfolio-item animate-on-scroll"><img src="https://via.placeholder.com/600x400/32a852/f5f5dc?text=Projeto+D" alt="Projeto D"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title text-center">Vamos criar algo incrível juntos?</h2>
+                <p class="text-center">Envie sua ideia, dúvida ou apenas um "oi!". Estamos prontos para ouvir você.</p>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" name="name" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+                    <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DUALINA agência criativa. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
