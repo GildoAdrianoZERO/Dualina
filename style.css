@@ -93,8 +93,9 @@ body {
     border-radius: 50px;
 }
 
-.btn-contact:hover {
-    color: var(--cream);
+
+#btn-contact:hover{
+    color: var(--white);
     opacity: 0.9;
 }
 
@@ -366,6 +367,7 @@ body {
     color: var(--cream);
     text-decoration: none;
     margin-left: 20px;
+    margin-bottom: 10px;
     font-size: 1rem;
     font-weight: 600;
     display: flex;
