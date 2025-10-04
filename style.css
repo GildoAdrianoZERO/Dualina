@@ -7,8 +7,10 @@
     --brown: #594a3c;
     --cream: #f5f5dc;
     --white: #ffffff;
+    --brown2: #3d2500;
+    
 
-    --font-display: 'Pacifico', cursive; /* Alternativa para Dream Planer Script */
+    --font-display: 'Pacifico', cursive;
     --font-text: 'Poppins', sans-serif;
 
     --header-height: 80px;
@@ -61,22 +63,20 @@ body {
     align-items: center;
     padding: 0 5%;
     height: var(--header-height);
-    background-color: rgba(245, 245, 220, 0.8);
+    background-color: var(--cream);
     backdrop-filter: blur(10px);
     z-index: 100;
     transition: background-color 0.3s;
 }
 
-.logo {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    color: var(--brown);
-    text-decoration: none;
+.logo img {
+    max-height: 45px; /* Altura da logo no menu */
+    display: block;
 }
 
 .navbar a {
     text-decoration: none;
-    color: var(--brown);
+    color: var( --brown);
     font-weight: 600;
     margin-left: 30px;
     transition: color 0.3s;
@@ -148,30 +148,25 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(89, 74, 60, 0.5); /* Overlay Marrom */
+    background-color: var(--brown2); /* Overlay Marrom */
+    background-image: url(src/Textura-1---Marrom.png);
+
 }
 
 .hero-content {
     z-index: 1;
+    padding: 0 20px;
 }
 
-.hero-title {
-    font-family: var(--font-display);
-    font-size: clamp(4rem, 15vw, 10rem);
-    font-weight: normal;
-    color: var(--cream);
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: 2px;
+.hero-logo {
+    max-width: 600px; /* Tamanho máximo da logo no desktop */
+    width: 100%;
 }
 
 .hero-slogan {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     color: var(--orange);
 }
 
@@ -350,12 +345,11 @@ body {
     opacity: 0.9;
 }
 
-
 /* =================================
    Footer
    ================================= */
 .footer {
-    background-color: #4a3e32; /* Um pouco mais escuro que o marrom principal */
+    background-color: #4a3e32;
     color: var(--cream);
     padding: 40px 0;
 }
@@ -372,10 +366,21 @@ body {
     color: var(--cream);
     text-decoration: none;
     margin-left: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .social-links a:hover {
-    text-decoration: underline;
+    color: var(--orange);
+    transform: scale(1.05);
+}
+
+.social-links a i {
+    font-size: 1.6rem;
 }
 
 /* =================================
@@ -399,7 +404,15 @@ body {
     .section-title {
         font-size: 2.5rem;
     }
+
+    .hero-logo {
+        max-width: 90%; /* Ajusta o tamanho da logo central para telas menores */
+    }
     
+    .hero-slogan {
+        font-size: 1rem; /* Diminui o slogan no mobile */
+    }
+
     .navbar {
         position: absolute;
         top: var(--header-height);
@@ -449,5 +462,14 @@ body {
     .footer .container {
         flex-direction: column;
         text-align: center;
+        gap: 30px;
+    }
+
+    .social-links {
+        display: flex;
+    }
+    
+    .social-links a {
+        margin: 0 10px;
     }
 }
