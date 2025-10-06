@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
     <link rel="icon" type="image/png" sizes="16x16" href="src/favicon.ico">
 </head>
@@ -119,11 +121,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-next swiper-button-next-services"></div>
-                    <div class="swiper-button-prev swiper-button-prev-services"></div>
                     <div class="swiper-pagination swiper-pagination-services"></div>
                 </div>
-                </div>
+            </div>
         </section>
 
         <section id="portfolio" class="portfolio">
@@ -133,20 +133,26 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="src/Foto.jpg" alt="Projeto A">
+                            <a href="src/Foto.jpg" class="glightbox" data-gallery="portfolio-gallery">
+                                <img src="src/Foto.jpg" alt="Projeto A">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="src/Foto.jpg" alt="Projeto B">
+                            <a href="src/Foto.jpg" class="glightbox" data-gallery="portfolio-gallery">
+                                <img src="src/Foto.jpg" alt="Projeto B">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="src/Foto.jpg" alt="Projeto C">
+                            <a href="src/Foto.jpg" class="glightbox" data-gallery="portfolio-gallery">
+                                <img src="src/Foto.jpg" alt="Projeto C">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="src/Foto.jpg" alt="Projeto D">
+                             <a href="src/Foto.jpg" class="glightbox" data-gallery="portfolio-gallery">
+                                <img src="src/Foto.jpg" alt="Projeto D">
+                            </a>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
@@ -182,6 +188,7 @@
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     
     <script src="script.js"></script>
 

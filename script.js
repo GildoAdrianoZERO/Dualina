@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.1 // A animação começa quando 10% do elemento está visível
+        threshold: 0.1
     });
 
     const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
@@ -37,22 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-
-        // IMPORTANTE: Insira seu número de WhatsApp aqui!
         const phoneNumber = '5511999998888'; // <-- SUBSTITUA PELO SEU NÚMERO
-
-        // Pega os dados dos campos
         const name = contactForm.querySelector('input[name="name"]').value;
         const message = contactForm.querySelector('textarea[name="message"]').value;
-
-        // Formata a mensagem
         const formattedMessage = `Olá! Meu nome é ${name}. Gostaria de falar sobre: ${message}`;
-        
-        // Cria o link e abre o WhatsApp
         const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(formattedMessage)}`;
-        
         window.open(whatsappURL, '_blank');
-
         contactForm.reset();
     });
 
@@ -62,28 +52,30 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 'auto',
         spaceBetween: 30,
         centeredSlides: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        // Navegação por setas foi removida
     });
 
     // LÓGICA PARA INICIAR O CARROSSEL DE SERVIÇOS
     const servicesSwiper = new Swiper('.servicesSwiper', {
         loop: true,
         spaceBetween: 30,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
         pagination: {
             el: '.swiper-pagination-services',
             clickable: true,
         },
-        navigation: {
-            nextEl: '.swiper-button-next-services',
-            prevEl: '.swiper-button-prev-services',
-        },
+        // Navegação por setas foi removida
         breakpoints: {
             320: {
               slidesPerView: 1,
@@ -95,6 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
               slidesPerView: 3,
             }
         }
+    });
+
+    // INICIALIZAÇÃO DA BIBLIOTECA LIGHTBOX
+    const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
     });
 
 });
