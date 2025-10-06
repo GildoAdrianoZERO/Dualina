@@ -238,13 +238,6 @@ body {
     padding: 80px 0;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 3rem;
-}
-
 .service-card {
     background-color: var(--white);
     padding: 40px 30px;
@@ -381,34 +374,53 @@ body {
 }
 
 /* =================================
-   Estilos do Carrossel (Swiper)
+   Estilos dos Carrosséis (Swiper)
    ================================= */
 .swiper {
     width: 100%;
     padding-top: 20px;
-    padding-bottom: 50px; /* Espaço para a paginação */
+    padding-bottom: 50px; 
 }
 
-.swiper-slide {
+/* Estilos para o carrossel de Portfólio */
+.portfolio .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 48%; /* Define a largura para exibir dois slides */
+    width: 48%;
     height: auto;
 }
 
-.swiper-slide img {
+.portfolio .swiper-slide img {
     display: block;
     width: 100%;
     border-radius: 10px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: var(--orange); /* Usa a cor laranja da sua paleta */
+.portfolio .swiper-button-next,
+.portfolio .swiper-button-prev {
+    color: var(--orange);
 }
 
-.swiper-pagination-bullet-active {
-    background-color: var(--orange); /* Usa a cor laranja para a bolinha ativa */
+.portfolio .swiper-pagination-bullet-active {
+    background-color: var(--orange);
+}
+
+/* Estilos para o carrossel de Serviços */
+.services .swiper-slide {
+    height: auto;
+}
+
+.services .service-card {
+    height: 100%;
+}
+
+.services .swiper-button-next-services,
+.services .swiper-button-prev-services {
+    color: var(--orange);
+}
+
+.services .swiper-pagination-services .swiper-pagination-bullet-active {
+    background-color: var(--orange);
 }
 
 /* =================================
@@ -420,11 +432,11 @@ body {
     }
 
     .hero-logo {
-        max-width: 90%; /* Ajusta o tamanho da logo central para telas menores */
+        max-width: 90%;
     }
     
     .hero-slogan {
-        font-size: 1rem; /* Diminui o slogan no mobile */
+        font-size: 1rem;
     }
 
     .navbar {
@@ -469,8 +481,8 @@ body {
         flex-direction: column;
     }
     
-    .swiper-slide {
-        width: 100%; /* Exibe apenas um slide por vez no celular */
+    .portfolio .swiper-slide {
+        width: 100%; 
     }
 
     .footer .container {

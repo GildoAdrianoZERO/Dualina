@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.reset();
     });
 
-    // LÓGICA PARA INICIAR O CARROSSEL (SWIPER)
+    // LÓGICA PARA INICIAR O CARROSSEL DE PORTFÓLIO
     const swiper = new Swiper('.mySwiper', {
         loop: true,
         slidesPerView: 'auto',
@@ -70,6 +70,31 @@ document.addEventListener('DOMContentLoaded', () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    });
+
+    // LÓGICA PARA INICIAR O CARROSSEL DE SERVIÇOS
+    const servicesSwiper = new Swiper('.servicesSwiper', {
+        loop: true,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination-services',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next-services',
+            prevEl: '.swiper-button-prev-services',
+        },
+        breakpoints: {
+            320: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            }
+        }
     });
 
 });
