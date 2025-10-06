@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // IMPORTANTE: Insira seu número de WhatsApp aqui!
         // Formato: código do país (55) + DDD + número (tudo junto).
         //
-        const phoneNumber = '5511999998888'; // <-- SUBSTITUA PELO SEU NÚMERO
+        const phoneNumber = '5581 983641431';
 
         // Pega os dados dos campos
         const name = contactForm.querySelector('input[name="name"]').value;
