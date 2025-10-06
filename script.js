@@ -33,19 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-
-    // ===============================================
-    // LÓGICA DO FORMULÁRIO ATUALIZADA PARA O WHATSAPP
-    // ===============================================
+    // Lógica do formulário de contato para WhatsApp
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        //
         // IMPORTANTE: Insira seu número de WhatsApp aqui!
-        // Formato: código do país (55) + DDD + número (tudo junto).
-        //
-        const phoneNumber = '5581 983641431';
+        const phoneNumber = '5511999998888'; // <-- SUBSTITUA PELO SEU NÚMERO
 
         // Pega os dados dos campos
         const name = contactForm.querySelector('input[name="name"]').value;
@@ -54,13 +48,28 @@ document.addEventListener('DOMContentLoaded', () => {
         // Formata a mensagem
         const formattedMessage = `Olá! Meu nome é ${name}. Gostaria de falar sobre: ${message}`;
         
-        // Cria o link e abre o WhatsApp em uma nova aba
+        // Cria o link e abre o WhatsApp
         const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(formattedMessage)}`;
         
         window.open(whatsappURL, '_blank');
 
-        // Limpa o formulário
         contactForm.reset();
+    });
+
+    // LÓGICA PARA INICIAR O CARROSSEL (SWIPER)
+    const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
 
 });
