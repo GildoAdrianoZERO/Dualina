@@ -33,17 +33,34 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Lógica do formulário de contato (simulação)
+
+    // ===============================================
+    // LÓGICA DO FORMULÁRIO ATUALIZADA PARA O WHATSAPP
+    // ===============================================
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Impede o envio real do formulário
+        e.preventDefault();
+
+        //
+        // IMPORTANTE: Insira seu número de WhatsApp aqui!
+        // Formato: código do país (55) + DDD + número (tudo junto).
+        //
+        const phoneNumber = '5511999998888'; // <-- SUBSTITUA PELO SEU NÚMERO
+
+        // Pega os dados dos campos
+        const name = contactForm.querySelector('input[name="name"]').value;
+        const message = contactForm.querySelector('textarea[name="message"]').value;
+
+        // Formata a mensagem
+        const formattedMessage = `Olá! Meu nome é ${name}. Gostaria de falar sobre: ${message}`;
         
-        // Aqui você adicionaria a lógica para enviar o formulário
-        // para um serviço de e-mail ou backend.
+        // Cria o link e abre o WhatsApp em uma nova aba
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(formattedMessage)}`;
         
-        alert('Obrigado pelo seu contato! Mensagem recebida.');
-        
-        contactForm.reset(); // Limpa o formulário após o "envio"
+        window.open(whatsappURL, '_blank');
+
+        // Limpa o formulário
+        contactForm.reset();
     });
 
 });
