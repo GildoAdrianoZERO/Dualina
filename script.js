@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const phoneNumber = '5511999998888'; // <-- SUBSTITUA PELO SEU NÚMERO
+        const phoneNumber = '5581983641431'; 
         const name = contactForm.querySelector('input[name="name"]').value;
         const message = contactForm.querySelector('textarea[name="message"]').value;
         const formattedMessage = `Olá! Meu nome é ${name}. Gostaria de falar sobre: ${message}`;
@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.swiper-pagination-services',
             clickable: true,
         },
-        // Navegação por setas foi removida
         breakpoints: {
             320: {
               slidesPerView: 1,
